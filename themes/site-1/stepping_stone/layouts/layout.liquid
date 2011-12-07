@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='utf-8' xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="description" content="{{ site.title }}, {{ site.subtitle }}, 斯美丽, 博客"/>
+  <meta name="keyword" content="{{ site.title }}, {{ site.subtitle }}, 斯美丽,个人博客,博客,"/>
+  <title>{{ site.title }}::{% if article %}{{ article.title }} {% else %}{{ site.subtitle }} {% endif %}</title>
+  <meta name="generator" content="Mephisto" />
+  {{ 'main' | stylesheet }}
+  {{ site.home_section | articles_feed }}
+</head>
+
+<body>
+        <div id="container">
+    	        <div id="title">
+                        <div id="pic">
+				<a href="/"><img src="/images/se3.jpg" alt="" border="0" title="" /></a>
+                        </div>
+			<h1><a href='/'><img src='/images/logo.gif' alt='{{ site.title }}' /></a></h1>
+				<p>
+ 					{{ site.subtitle }}
+				</p>
+                 </div>
+		<div id="sidebar">
+
+{% if false %}
+		        <h1 id='menu_h1'>Menu</h1>
+                        <div id="menu">
+                        <ul>
+                              {% for category in site.blog_sections %}<li>{{ category | link_to_section  }}</li>{% endfor %}
+
+	                      {% if site.page_sections %}
+	                                 {% for page in site.page_sections %}<li>{{ page | link_to_section }}</li>{% endfor %}
+	                         {% endif %}
+                         </ul>
+                         </div>
+{% endif %}
+
+                         <h1  id='menu_h1'>Tags</h1>
+                         <div id='tags'>
+                                 {% for tag in site.tags %}<nobr>{{ tag | link_to_tag  }}</nobr> {% endfor %}
+                         </div>
+
+                         {% include 'resolution' %}
+
+                         {% include 'somelinks' %}
+
+                         {% include 'links' %}
+
+                        {% if section %}
+                        <h1>Archives</h1>
+                        <ul id='archives'>
+                                  {% for month in section.months limit:10 %}
+                                           {{ section | monthly_articles :month | size | assign_to: 'articles_count' }}
+                                           {% if articles_count > 0 %}
+                                                       <li><a href="{{ section.path }}/{{ section.archive_path }}/{{ month | strftime :"%Y/%m" }}">{{ month | strftime :"%b %Y" }} ({{ articles_count }})</a></li>
+                                           {% endif %}
+                                  {% endfor %}
+                         </ul>
+                         <div style='align:right;padding-top:5px;'><a href='/archives'>> all of them please</a></div>
+                         {% endif %}
+
+
+			<h1>Search</h1>
+			<div style="text-align:right;">
+				<form method="get" id="sform" action="/search">
+        				<input type="text" id="q" value="search" name="q" size="10" onfocus="q.value='';" onblur="q.value='search' ;" style="text-align:right;" />
+				</form>
+			</div>
+		</div>
+
+		<div id="content">
+			{{ content_for_layout }}
+                                   <div id='lower_jpg'>
+                                            <img src='/images/se4.jpg' alt='The lower picture.'/>
+                                    </div>
+		</div>
+
+<div id="footer">
+				Powered by <a href="http://mephistoblog.com/">Mephisto</a>
+				Valid: <a href="http://validator.w3.org/check?uri=referer">xhtml</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">css</a><br />
+		Original Design by <a href="http://www.jameskoster.co.uk">JayKay</a>, modified for Mephisto by 
+<a href="http://offtheline.net/about/me">Jason L.</a><br/>
+Customised and Supported by bin, Illustrations by <a href='http://hokusoem.com/'>高木直子</a>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4343928-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>

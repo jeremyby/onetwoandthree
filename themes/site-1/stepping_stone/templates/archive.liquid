@@ -1,0 +1,22 @@
+{% if articles %}
+
+        {% include 'shared' %}
+
+{% else %}
+
+<h1>Archives</h1>
+
+{% for category in site.blog_sections %}
+        <h2>{{ category | link_to_section  }}</h2>
+                        <ul>
+                                  {% for month in category.months %}
+                                           {{ category | monthly_articles :month | assign_to: 'articles'  }}
+                                           {{ articles | size | assign_to: 'articles_count' }}
+                                           {% if articles_count > 0 %}
+                                                       <li><a href="{{ category.path }}/{{ category.archive_path }}/{{ month | strftime :"%Y/%m" }}">{{ month | strftime :"%B %Y" }} ({{ articles_count }})</a></li>
+                                           {% endif %}
+                                  {% endfor %}
+                         </ul>
+{% endfor %}
+
+{% endif %}

@@ -1,0 +1,330 @@
+/* CSS Document */
+
+body {
+	background-color: #ffe559 /*#6DD0CD*/;
+	margin: 0;
+  	font-family:Verdana, Arial, Helvetica, sans-serif, Hei;
+	font-size:11.5px;
+	color:#444;
+}
+
+a {
+	color:#999;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+textarea,input,submit {
+	background-color:#eeeeee;
+	color:#666;
+	padding:5px;
+	border:none;
+	margin:3px;
+}
+
+h1 {
+	font-family:Georgia, "Times New Roman", Times, serif, Hei;
+	font-size: 200%;
+       color: #000000;
+	font-weight:normal;
+}
+
+code { overflow: auto }
+pre { overflow: auto }
+
+/* THE AREA THAT CONTAINS ALL THE CONTENT OF THE WEBSITE */
+
+#container {
+        background: #fff url(/images/main_bg.gif) repeat-y center top;
+	width:688px;
+        padding:  20px 0;
+	margin:0 auto 0 auto;
+        /*border-style: none solid;
+        border-width: 1px;
+        border-color: #e6ca35  #53bdb9 */;
+}
+
+/* THE AREA THAT CONTAINS THE STONE IMAGE AND THE WEBSITE TITLE */
+
+#title {
+        position: relative;
+	text-align:left;
+	margin: 0 4px 25px 4px;
+        padding: 61px 30px 60px 30px;
+        background: white url(/images/title_bg.gif) no-repeat center bottom;
+}
+
+#title #pic {
+    position: absolute;
+    right: 30px;
+    top: -10px;
+    height: 162px;
+}
+
+#title img {
+      border: none;
+}
+
+#title h1 {
+      margin: 0;
+      font-weight: bold;
+}
+
+#title p {
+	font-variant:small-caps;
+	letter-spacing:2px;
+        font-size: 120%;
+        padding-left: 25px;
+}
+
+#title h1 a {
+        color: #444;
+        text-decoration: none;
+}
+
+/* THE SIDEBAR WITHIN THE CONTAINER */
+
+#sidebar {
+        background: #fff;
+	width:140px;
+        margin: 0 30px 0 0;
+        padding: 0;
+	float:right;
+        position: relative;
+
+       _margin: 0 20px 0 0;
+}
+
+#sidebar a {
+	text-decoration:none;
+}
+
+#sidebar a:hover {
+        color:#ccc;
+}
+
+#sidebar h1 {
+	font-family:"Trebuchet MS", Arial, Verdana;
+	text-align:right;
+	font-size:180%;
+	color:#626477;
+        font-weight: bold;
+	border-bottom:1px dashed #eeeeee;
+        margin: 1em 0 0.2em 0;
+}
+
+#sidebar h2 {
+    font-size: 140%;
+    font-weight: normal;
+}
+
+#sidebar p {
+	line-height:20px;
+}
+
+#sidebar ul, 
+#sidebar div {
+        text-align: right;
+}
+
+#sidebar #menu_h1 {
+        margin-top: 0.2em;
+}
+
+#sidebar #menu a {
+        font-weight: bold;
+}
+
+#sidebar #tags {
+        text-align: right;
+        line-height: 20px;
+}
+
+#sidebar ul#archives {
+        margin: 0;
+}
+
+/* THE AREA NEXT TO THE SIDEBAR */
+
+#content {
+background: #fff;
+        float: left;
+        width: 440px;
+        margin: 0 0 0 30px;
+        padding: 0 15px 0 0;
+	border-right:1px solid #cccccc;
+
+        _margin: 0 0 0 20px;
+}
+
+#content #lower_jpg {
+        text-align: right;
+        margin-top: -40px;
+        margin-right: -15px;
+}
+
+#content h1 {
+	font-family:"Trebuchet MS", Arial, Verdana;
+	text-align:left;
+	font-size:180%;
+	color:#626477;
+	border-bottom:1px dashed #eeeeee;
+	padding-top:15px !important;
+        padding-top:0;
+	background-image:url(images/stone.gif);
+	background-position:top right;
+	background-repeat:no-repeat;
+}
+
+#content h2 {
+    font-size: 140%;
+    font-weight: bold;
+}
+
+#content h3 {
+    font-size: 100%;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#content p {
+	line-height:20px;
+	text-indent:15px;
+}
+
+#content ol,ul {
+	line-height:25px;
+}
+
+#content li {
+	list-style-image:url(images/backgrounds/li.gif);
+}
+
+#content .entry {
+        margin-bottom: 30px;
+}
+
+/* THE FOOTER */
+
+#footer {
+background: #fff;
+        clear: both;
+	width:580px;
+	margin:0 auto 0 auto;
+	padding:10px;
+	text-align:center;
+	border-top:1px dashed #cccccc;
+}
+
+
+/********************
+ +Coderay
+*********************/
+
+.CodeRay {
+  background-color: #f8f8f8;
+  border: 1px solid silver;
+  font-family: monospace;
+  font-size: 11px;
+  color: #100;
+}
+.CodeRay pre { margin: 0px }
+
+div.CodeRay { }
+
+span.CodeRay { white-space: pre; border: 0px; padding: 2px }
+
+table.CodeRay { border-collapse: collapse; width: 100%; padding: 2px }
+table.CodeRay td { padding: 2px 4px; vertical-align: top }
+
+.CodeRay .line_numbers, .CodeRay .no {
+  background-color: #def;
+  color: gray;
+  text-align: right;
+}
+.CodeRay .line_numbers tt { font-weight: bold }
+.CodeRay .no { padding: 0px 4px }
+.CodeRay .code { width: 100% }
+
+ol.CodeRay { font-size: 10pt }
+ol.CodeRay li { white-space: pre }
+
+.CodeRay .code pre { overflow: auto }
+
+.CodeRay .af { color:#00C }
+.CodeRay .an { color:#007 }
+.CodeRay .av { color:#700 }
+.CodeRay .aw { color:#C00 }
+.CodeRay .bi { color:#509; font-weight:bold }
+.CodeRay .c  { color:#888 }
+
+.CodeRay .ch { color:#04D }
+.CodeRay .ch .k { color:#04D }
+.CodeRay .ch .dl { color:#039 }
+
+.CodeRay .cl { color:#B06; font-weight:bold }
+.CodeRay .co { color:#036; font-weight:bold }
+.CodeRay .cr { color:#0A0 }
+.CodeRay .cv { color:#369 }
+.CodeRay .df { color:#099; font-weight:bold }
+.CodeRay .di { color:#088; font-weight:bold }
+.CodeRay .dl { color:black }
+.CodeRay .do { color:#970 }
+.CodeRay .ds { color:#D42; font-weight:bold }
+.CodeRay .e  { color:#666; font-weight:bold }
+.CodeRay .en { color:#800; font-weight:bold }
+.CodeRay .er { color:#F00; background-color:#FAA }
+.CodeRay .ex { color:#F00; font-weight:bold }
+.CodeRay .fl { color:#60E; font-weight:bold }
+.CodeRay .fu { color:#06B; font-weight:bold }
+.CodeRay .gv { color:#d70; font-weight:bold }
+.CodeRay .hx { color:#058; font-weight:bold }
+.CodeRay .i  { color:#00D; font-weight:bold }
+.CodeRay .ic { color:#B44; font-weight:bold }
+
+.CodeRay .il { background: #eee }
+.CodeRay .il .il { background: #ddd }
+.CodeRay .il .il .il { background: #ccc }
+.CodeRay .il .dl { font-weight: bold ! important; color: #888 ! important }
+
+.CodeRay .in { color:#B2B; font-weight:bold }
+.CodeRay .iv { color:#33B }
+.CodeRay .la { color:#970; font-weight:bold }
+.CodeRay .lv { color:#963 }
+.CodeRay .oc { color:#40E; font-weight:bold }
+.CodeRay .on { color:#000; font-weight:bold }
+.CodeRay .op { }
+.CodeRay .pc { color:#038; font-weight:bold }
+.CodeRay .pd { color:#369; font-weight:bold }
+.CodeRay .pp { color:#579 }
+.CodeRay .pt { color:#339; font-weight:bold }
+.CodeRay .r  { color:#080; font-weight:bold }
+
+.CodeRay .rx { background-color:#fff0ff }
+.CodeRay .rx .k { color:#808 }
+.CodeRay .rx .dl { color:#404 }
+.CodeRay .rx .mod { color:#C2C }
+.CodeRay .rx .fu  { color:#404; font-weight: bold }
+
+.CodeRay .s  { background-color:#fff0f0 }
+.CodeRay .s  .s { background-color:#ffe0e0 }
+.CodeRay .s  .s  .s { background-color:#ffd0d0 }
+.CodeRay .s  .k { color:#D20 }
+.CodeRay .s  .dl { color:#710 }
+
+.CodeRay .sh { background-color:#f0fff0 }
+.CodeRay .sh .k { color:#2B2 }
+.CodeRay .sh .dl { color:#161 }
+
+.CodeRay .sy { color:#A60 }
+.CodeRay .sy .k { color:#A60 }
+.CodeRay .sy .dl { color:#630 }
+
+.CodeRay .ta { color:#070 }
+.CodeRay .tf { color:#070; font-weight:bold }
+.CodeRay .ts { color:#D70; font-weight:bold }
+.CodeRay .ty { color:#339; font-weight:bold }
+.CodeRay .v  { color:#036 }
+.CodeRay .xt { color:#444 }
