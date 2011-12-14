@@ -31,9 +31,9 @@ test:
 
 production:
   adapter: mysql
-  database: onetwoan_mephisto
-  username: onetwoan_onetwoa
-  password: 1rdel6ac
+  database: mephisto
+  username: jeremyby
+  password: 19781115
   host: localhost
   encoding: utf8
 
